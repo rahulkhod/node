@@ -1,7 +1,5 @@
 const express= require('express');
 const app=new express();
-
-
 app.get('/',(req,res)=>{
     res.send(`<!DOCTYPE html>
     <html lang="en">
@@ -18,8 +16,5 @@ app.get('/',(req,res)=>{
     </body>
     </html>`)
 })
-
-app.listen(process.env.PORT||5000,(err)=>{
-    console.log(`Server is listening on ${PORT}`);
-})
+app.listen(process.env.PORT||5000);
 module.exports=app;
